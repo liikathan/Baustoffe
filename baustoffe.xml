@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Baustoffe>
+    <organische>
+        <Holz></Holz>
+    </organische>
+    <anorganische>
+        <metallische>
+            <Stahl></Stahl>
+        </metallische>
+        <mineralische>
+            <Beton>
+                <Definition></Definition>
+                <Festigkeit einheit="N/mm²"></Festigkeit>
+                <Elastizitätsmodul einheit=""></Elastizitätsmodul>
+            </Beton>
+            <Zement>
+                <Definition>anorganisches, fein gemalenes, hydraulisch wirkendes Bindemittel für Mörtel und Beton </Definition>
+            </Zement>
+            <Mörtel>
+                <Definition>">=4mm grobe Gesteinskörnung"</Definition>
+            </Mörtel>
+        </mineralische>
+    </anorganische>
+</Baustoffe>
