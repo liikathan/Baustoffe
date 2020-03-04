@@ -9,15 +9,15 @@
         </metallische>
         <mineralische>
             <Beton>
-                <Definition></Definition>
-                <Festigkeit einheit="N/mm²"></Festigkeit>
-                <Elastizitätsmodul einheit=""></Elastizitätsmodul>
+                <Körnung einheit="mm">min.4</Körnung>
+                <Festigkeit einheit="f=N/mm²"></Festigkeit>
+                <Elastizitätsmodul einheit="E=(N/mm²)/mm"></Elastizitätsmodul>
             </Beton>
             <Zement>
                 <Definition>anorganisches, fein gemalenes, hydraulisch wirkendes Bindemittel für Mörtel und Beton </Definition>
             </Zement>
             <Mörtel>
-                <Definition>">=4mm grobe Gesteinskörnung"</Definition>
+                <Körnung einheit="mm">max.4</Körnung>
             </Mörtel>
         </mineralische>
     </anorganische>

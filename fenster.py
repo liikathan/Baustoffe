@@ -36,6 +36,15 @@ def clicked1():
                 zindow.title("Beton")
                 zindow.geometry("500x500")
 
+                beton1 = Label(zindow, text="Bestandteile",
+                               font=("Times New Roman", 15), padx=10)
+                beton2 = Label(zindow, text="Zement, Wasser, Gesteinskörnung, Zusatzstoffe, Zusatzmittel, Stahlfasern", font=(
+                    "Times New Roman", 11))
+
+                beton1.pack()
+                beton2.pack()
+                zindow.mainloop()
+
             def clicked4b():
                 yindow.destroy()
                 zindow = tk.Tk()
@@ -150,12 +159,12 @@ def clicked1():
 lf1 = LabelFrame(window, text="Baustoffe", font=("Times New Roman", 15))
 lf1.grid(column=0, row=0)
 Inhalt = "Die Natur bietet dem Menschen *Naturstoffe*.\n Diese werden zu *Rohstoffen*,\n wenn sie durch menschliche Arbeit gewonnen werden\n (bsp.Erze/ Kies).\n Bearbeitet man die Rohstoffe industriell,\n so werden sie zu *Werkstoffen*.\n Werkstoffe, die in der Bauindustrie verwendet werden,\n bezeichnet man als *Baustoff*.\n Aus Baustoffen werden Bauwerke"
-lbl2 = Label(lf1, text=Inhalt, font=(
+lbl1 = Label(lf1, text=Inhalt, font=(
     "Times New Roman", 11), width=45, height=15)
 nxt = Button(lf1, text="weiter", font=(
     "Times New Roman", 11), command=clicked1)
 
-lbl2.pack()
+lbl1.pack()
 nxt.pack()
 
 window.mainloop()
