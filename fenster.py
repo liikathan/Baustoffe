@@ -62,7 +62,7 @@ def clicked1():
                 beton4 = Label(zindow, text="\nStruktur und Eigenschaften", font=(
                     "Times New Roman", 15))
                 SuE = Label(
-                    zindow, text="Zement + Wasser -> CSH-Phasen + Portlandit\n3CaO + SiO2(Alit) + H2O -> Ca(OH)2\n2CaO + SiO2(Belit) + H20\n\nhohe Druckfestigkeit, dicht,wasserbeständig\nKapillarporen ->Frostprobleme, keine Dauerhaftigkeit", font=("Times New Roman", 11))
+                    zindow, text="Zement + Wasser -> CSH-Phasen + Portlandit\n3CaO * SiO2(Alit) + H2O -> Ca(OH)2\n2CaO * SiO2(Belit) + H20\n\nhohe Druckfestigkeit, dicht,wasserbeständig\nKapillarporen ->Frostprobleme, keine Dauerhaftigkeit", font=("Times New Roman", 11))
 
                 beton1.pack()
                 zmnt.pack()
@@ -88,11 +88,22 @@ def clicked1():
 
                 gips1 = Label(zindow, text="Vorkommen",
                               font=("Times New Roman", 15))
+                rauch = PhotoImage(
+                    file=r"C:\Users\Lisa\Dropbox\Python\PythonMitLi\Baustoffe\Rauchgasentschwefelung.gif")
+                #gasen = rauch.subsample(67, 76)
+                vorko = Label(zindow, text="Natürliches Vorkommen\n\nIndustrielles Restprodukt (bei der Rauchgasentschwefelung)\nCalciumsulfit + Luft -> Calciumsulfat\n2 CaSO3 + O2 → 2 CaSO4", font=(
+                    "Times New Roman", 11))
+                #tschw = Label(zindow, image=gasen)
                 gips2 = Label(zindow, text="\nStruktur und Eigenschaften", font=(
                     "Times New Roman", 15))
+                SuE = Label(zindow, text="CaSO4 * 2H2O\nBeim Brennen findet keine chemische Reaktion statt\nErhärten ist ein Kristallisationsvorgang (->CaSO4)",
+                            font=("Times New Roman", 11))
 
                 gips1.pack()
+                vorko.pack()
+                # tschw.pack()
                 gips2.pack()
+                SuE.pack()
 
             def clicked4c():
                 yindow.destroy()
@@ -192,8 +203,7 @@ def clicked1():
 
 lf1 = LabelFrame(window, text="Baustoffe", font=("Times New Roman", 15))
 lf1.grid(column=0, row=0)
-Inhalt = "Die Natur bietet dem Menschen *Naturstoffe*.\n Diese werden zu *Rohstoffen*,\n wenn sie durch menschliche Arbeit gewonnen werden\n (bsp.Erze/ Kies).\n Bearbeitet man die Rohstoffe industriell,\n so werden sie zu *Werkstoffen*.\n Werkstoffe, die in der Bauindustrie verwendet werden,\n bezeichnet man als *Baustoff*.\n Aus Baustoffen werden Bauwerke"
-lbl1 = Label(lf1, text=Inhalt, font=(
+lbl1 = Label(lf1, text="Die Natur bietet dem Menschen Naturstoffe.\n Diese werden zu Rohstoffen,\n wenn sie durch menschliche Arbeit gewonnen werden\n (bsp.Erze/ Kies).\n Bearbeitet man die Rohstoffe industriell,\n so werden sie zu Werkstoffen.\n Werkstoffe, die in der Bauindustrie verwendet werden,\n bezeichnet man als Baustoff.\n Aus Baustoffen werden Bauwerke", font=(
     "Times New Roman", 11), width=45, height=15)
 nxt = Button(lf1, text="weiter", font=(
     "Times New Roman", 11), command=clicked1)
