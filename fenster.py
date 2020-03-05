@@ -34,7 +34,7 @@ def clicked1():
                 yindow.destroy()
                 zindow = tk.Tk()
                 zindow.title("Beton")
-                zindow.geometry("500x500")
+                zindow.geometry("500x700")
 
                 beton1 = Label(zindow, text="Bestandteile",
                                font=("Times New Roman", 15))
@@ -50,15 +50,19 @@ def clicked1():
                                     font=("Times New Roman", 11), padx=14)
                 stahlf = Button(zindow, text="Stahlfassern",
                                 font=("Times New Roman", 11), padx=13)
-                beton2 = Label(zindow, text="Mischverhältnis",
+                beton2 = Label(zindow, text="\nMischverhältnis",
                                font=("Times New Roman", 15))
-                mischverhaeltnis = Label(zindow, text="\nDie korrekte Zuordnung des Bauteiles/Bauwerkes zu Expositionsklassen,\n je nach Umgebungsbedingungen ist\n eine wichtige Voraussetzung für die Zusammensetzung des Betons.\n In Abhängigkeit der zu erwartenden Beanspruchungen, die auf das Bauteil wirken,\n werden in den Expositionsklassen Anforderungen vorgegeben.\n", font=("Times New Roman", 11))
+                mischverhaeltnis = Label(zindow, text="Die korrekte Zuordnung des Bauteiles/Bauwerkes zu Expositionsklassen,\n je nach Umgebungsbedingungen ist\n eine wichtige Voraussetzung für die Zusammensetzung des Betons.\n In Abhängigkeit der zu erwartenden Beanspruchungen, die auf das Bauteil wirken,\n werden in den Expositionsklassen Anforderungen vorgegeben.", font=("Times New Roman", 11))
                 TdE = Button(zindow, text="Tabelle der Expositionsklassen", font=(
                     "Times New Roman", 11))
-                beton3 = Label(zindow, text="Prozessstufen bei der Herstellung", font=(
+                beton3 = Label(zindow, text="\nProzessstufen bei der Herstellung", font=(
                     "Times New Roman", 15))
-                beton4 = Label(zindow, text="Struktur und Eigenschaften", font=(
+                PbdH = Label(
+                    zindow, text="1. Herstellen(Mischen) im Transportbetonwerk\n2. Befördern im Fahrmischer\n3. Frischbeton ausbreiten\n4. Nachbehandeln (mit Wasser oder Nachbehandlungsmitteln) um das\nTrocknen zu verhindern -> Beton härtet, d.h chem. Reaktionen finden statt\n5. Festbeton ausschalen", font=("Times New Roman", 11))
+                beton4 = Label(zindow, text="\nStruktur und Eigenschaften", font=(
                     "Times New Roman", 15))
+                SuE = Label(
+                    zindow, text="Zement + Wasser -> CSH-Phasen + Portlandit\n3CaO + SiO2(Alit) + H2O -> Ca(OH)2\n2CaO + SiO2(Belit) + H20\n\nhohe Druckfestigkeit, dicht,wasserbeständig\nKapillarporen ->Frostprobleme, keine Dauerhaftigkeit", font=("Times New Roman", 11))
 
                 beton1.pack()
                 zmnt.pack()
@@ -71,7 +75,9 @@ def clicked1():
                 mischverhaeltnis.pack()
                 TdE.pack()
                 beton3.pack()
+                PbdH.pack()
                 beton4.pack()
+                SuE.pack()
                 zindow.mainloop()
 
             def clicked4b():
@@ -79,6 +85,14 @@ def clicked1():
                 zindow = tk.Tk()
                 zindow.title("Gips")
                 zindow.geometry("500x500")
+
+                gips1 = Label(zindow, text="Vorkommen",
+                              font=("Times New Roman", 15))
+                gips2 = Label(zindow, text="\nStruktur und Eigenschaften", font=(
+                    "Times New Roman", 15))
+
+                gips1.pack()
+                gips2.pack()
 
             def clicked4c():
                 yindow.destroy()
