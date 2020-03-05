@@ -37,12 +37,41 @@ def clicked1():
                 zindow.geometry("500x500")
 
                 beton1 = Label(zindow, text="Bestandteile",
-                               font=("Times New Roman", 15), padx=10)
-                beton2 = Label(zindow, text="Zement, Wasser, Gesteinskörnung, Zusatzstoffe, Zusatzmittel, Stahlfasern", font=(
+                               font=("Times New Roman", 15))
+                zmnt = Button(zindow, text="Zement", font=(
+                    "Times New Roman", 11), padx=27, command=clicked4g)
+                wasser = Button(zindow, text="Wasser",
+                                font=("Times New Roman", 11), padx=27)
+                gstkrn = Button(zindow, text="Gesteinskörnung",
+                                font=("Times New Roman", 11))
+                zusatzst = Button(zindow, text="Zusatzstoffe",
+                                  font=("Times New ROman", 11), padx=13)
+                zusatzmttl = Button(zindow, text="Zusatzmittel",
+                                    font=("Times New Roman", 11), padx=14)
+                stahlf = Button(zindow, text="Stahlfassern",
+                                font=("Times New Roman", 11), padx=13)
+                beton2 = Label(zindow, text="Mischverhältnis",
+                               font=("Times New Roman", 15))
+                mischverhaeltnis = Label(zindow, text="\nDie korrekte Zuordnung des Bauteiles/Bauwerkes zu Expositionsklassen,\n je nach Umgebungsbedingungen ist\n eine wichtige Voraussetzung für die Zusammensetzung des Betons.\n In Abhängigkeit der zu erwartenden Beanspruchungen, die auf das Bauteil wirken,\n werden in den Expositionsklassen Anforderungen vorgegeben.\n", font=("Times New Roman", 11))
+                TdE = Button(zindow, text="Tabelle der Expositionsklassen", font=(
                     "Times New Roman", 11))
+                beton3 = Label(zindow, text="Prozessstufen bei der Herstellung", font=(
+                    "Times New Roman", 15))
+                beton4 = Label(zindow, text="Struktur und Eigenschaften", font=(
+                    "Times New Roman", 15))
 
                 beton1.pack()
+                zmnt.pack()
+                wasser.pack()
+                gstkrn.pack()
+                zusatzst.pack()
+                zusatzmttl.pack()
+                stahlf.pack()
                 beton2.pack()
+                mischverhaeltnis.pack()
+                TdE.pack()
+                beton3.pack()
+                beton4.pack()
                 zindow.mainloop()
 
             def clicked4b():
@@ -88,33 +117,24 @@ def clicked1():
                 zindow.geometry("500x500")
 
             lf4 = LabelFrame(yindow, text="Wähle einen Baustoff", font=(
-                "Times New Roman", 15), padx=75, pady=100)
+                "Times New Roman", 15), padx=100, pady=50)
             lf4.grid(column=0, row=0)
             Beton = Button(lf4, text="Beton", font=(
                 "Times New Roman", 11), padx=17, command=clicked4a)
-            Beton.grid(column=0, row=0)
             Gips = Button(lf4, text="Gips", font=(
                 "Times New Roman", 11), padx=21, command=clicked4b)
-            Gips.grid(column=1, row=0)
             Glas = Button(lf4, text="Glas", font=(
                 "Times New Roman", 11), padx=21, command=clicked4c)
-            Glas.grid(column=0, row=1)
             Kalk = Button(lf4, text="Kalk", font=(
                 "Times New Roman", 11), padx=20, command=clicked4d)
-            Kalk.grid(column=1, row=1)
             Lehm = Button(lf4, text="Lehm", font=(
                 "Times New Roman", 11), padx=18, command=clicked4e)
-            Lehm.grid(column=0, row=2)
             Naturstein = Button(lf4, text="Naturstein", font=(
-                "Times New Roman", 11), padx=2, command=clicked4f)
-            Naturstein.grid(column=1, row=2)
+                "Times New Roman", 11), padx=5, command=clicked4f)
             Zement = Button(lf4, text="Zement", font=(
-                "Times New Roman", 11), padx=12, command=clicked4g)
-            Zement.grid(column=0, row=3)
+                "Times New Roman", 11), padx=14, command=clicked4g)
             Ziegelstein = Button(lf4, text="Ziegelstein", font=(
-                "Times New Roman", 11), command=clicked4h)
-            Ziegelstein.grid(column=1, row=3)
-
+                "Times New Roman", 11), padx=3, command=clicked4h)
             Beton.pack()
             Gips.pack()
             Glas.pack()
