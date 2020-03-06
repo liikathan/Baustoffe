@@ -84,32 +84,42 @@ def clicked1():
                 yindow.destroy()
                 zindow = tk.Tk()
                 zindow.title("Gips")
-                zindow.geometry("500x500")
+                zindow.geometry("500x600")
 
                 gips1 = Label(zindow, text="Vorkommen",
                               font=("Times New Roman", 15))
-                rauch = PhotoImage(
+                render = PhotoImage(
                     file=r"C:\Users\Lisa\Dropbox\Python\PythonMitLi\Baustoffe\Rauchgasentschwefelung.gif")
-                #gasen = rauch.subsample(67, 76)
-                vorko = Label(zindow, text="Natürliches Vorkommen\n\nIndustrielles Restprodukt (bei der Rauchgasentschwefelung)\nCalciumsulfit + Luft -> Calciumsulfat\n2 CaSO3 + O2 → 2 CaSO4", font=(
+                img = Label(zindow, image=render)
+                img.image = render
+                gips2 = Label(zindow, compound=BOTTOM, text="Natürliches Vorkommen\n\nIndustrielles Restprodukt (bei der Rauchgasentschwefelung)\nCalciumsulfit + Luft -> Calciumsulfat\n2 CaSO3 + O2 → 2 CaSO4", image=render, font=(
                     "Times New Roman", 11))
-                #tschw = Label(zindow, image=gasen)
-                gips2 = Label(zindow, text="\nStruktur und Eigenschaften", font=(
+                gips3 = Label(zindow, text="\nStruktur und Eigenschaften", font=(
                     "Times New Roman", 15))
-                SuE = Label(zindow, text="CaSO4 * 2H2O\nBeim Brennen findet keine chemische Reaktion statt\nErhärten ist ein Kristallisationsvorgang (->CaSO4)",
-                            font=("Times New Roman", 11))
+                gips4 = Label(zindow, text="CaSO4 * 2H2O\nBeim Brennen findet keine chemische Reaktion statt\nErhärten ist ein Kristallisationsvorgang (->CaSO4)",
+                              font=("Times New Roman", 11))
 
                 gips1.pack()
-                vorko.pack()
-                # tschw.pack()
                 gips2.pack()
-                SuE.pack()
+                gips3.pack()
+                gips4.pack()
 
             def clicked4c():
                 yindow.destroy()
                 zindow = tk.Tk()
                 zindow.title("Glas")
                 zindow.geometry("500x500")
+
+                glas1 = Label(zindow, text="Herstellung",
+                              font=("Times New Roman", 15))
+                glas2 = Label(zindow, text="\nVerwendung",
+                              font=("Times New Roman", 15))
+                glas3 = Label(zindow, text="\nStruktur und Eigenschaften", font=(
+                    "Times New Roman", 15))
+
+                glas1.pack()
+                glas2.pack()
+                glas3.pack()
 
             def clicked4d():
                 yindow.destroy()
