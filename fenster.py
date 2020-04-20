@@ -63,6 +63,8 @@ def clicked1():
                     "Times New Roman", 15))
                 SuE = Label(
                     zindow, text="Zement + Wasser -> CSH-Phasen + Portlandit\n3CaO * SiO2(Alit) + H2O -> Ca(OH)2\n2CaO * SiO2(Belit) + H20\n\nhohe Druckfestigkeit, dicht,wasserbeständig\nKapillarporen ->Frostprobleme, keine Dauerhaftigkeit", font=("Times New Roman", 11))
+                back = Button(zindow, text="Zurück", font=(
+                    "Times New Roman", 11), command=clicked3b)
 
                 beton1.pack()
                 zmnt.pack()
@@ -78,6 +80,7 @@ def clicked1():
                 PbdH.pack()
                 beton4.pack()
                 SuE.pack()
+                back.pack()
                 zindow.mainloop()
 
             def clicked4b():
@@ -89,7 +92,7 @@ def clicked1():
                 gips1 = Label(zindow, text="Vorkommen",
                               font=("Times New Roman", 15))
                 render = PhotoImage(
-                    file=r"C:\Users\Lisa\Dropbox\Python\PythonMitLi\Baustoffe\Rauchgasentschwefelung.gif")
+                    file="Rauchgasentschwefelung.gif")
                 img = Label(zindow, image=render)
                 img.image = render
                 gips2 = Label(zindow, compound=BOTTOM, text="Natürliches Vorkommen\n\nIndustrielles Restprodukt (bei der Rauchgasentschwefelung)\nCalciumsulfit + Luft -> Calciumsulfat\n2 CaSO3 + O2 → 2 CaSO4", image=render, font=(
@@ -98,28 +101,41 @@ def clicked1():
                     "Times New Roman", 15))
                 gips4 = Label(zindow, text="CaSO4 * 2H2O\nBeim Brennen findet keine chemische Reaktion statt\nErhärten ist ein Kristallisationsvorgang (->CaSO4)",
                               font=("Times New Roman", 11))
+                back = Button(yindow, text="Zurück", font=(
+                    "Times New Roman", 11), command=clicked3b)
 
                 gips1.pack()
                 gips2.pack()
                 gips3.pack()
                 gips4.pack()
+                back.pack()
+                zindow.mainloop()
 
             def clicked4c():
                 yindow.destroy()
                 zindow = tk.Tk()
                 zindow.title("Glas")
-                zindow.geometry("500x500")
+                zindow.geometry("500x600")
 
-                glas1 = Label(zindow, text="Herstellung",
-                              font=("Times New Roman", 15))
+                render = PhotoImage(
+                    file="floatglass.png")
+                glas1 = Label(zindow, compound=BOTTOM, text="Herstellung", image=render, font=(
+                    "Times New Roman", 15))
                 glas2 = Label(zindow, text="\nVerwendung",
                               font=("Times New Roman", 15))
-                glas3 = Label(zindow, text="\nStruktur und Eigenschaften", font=(
+                glas3 = Label(
+                    zindow, text="Fenster und zunehmend tragende Strukturen\n\nBauglas = Alkali-Silikat-Gläser\nFensterglas = Kalk-Natron- Glas", font=("Times New Roman", 11))
+                glas4 = Label(zindow, text="\nStruktur und Eigenschaften", font=(
                     "Times New Roman", 15))
+                glas5 = Label(
+                    zindow, text="Sammelbegriff für alle amorphen Feststoffe\n->auch amorph erstarrte Metalle\n->teilweise organischen Ursprungs (bspw.Bernstein)\n\namorph -> unterkühlte zähe Flüssigkeit -> keine Nahordnung =/= kristallin\n\nHohe Lichtdruchlässigkeit\nSehr hohe Druckfestigkeit\nSehr spröde und schlagempfinglich\nähnlich hohe Dichte wie Beton", font=("Times New Roman", 11))
 
                 glas1.pack()
                 glas2.pack()
                 glas3.pack()
+                glas4.pack()
+                glas5.pack()
+                zindow.mainloop()
 
             def clicked4d():
                 yindow.destroy()
@@ -127,11 +143,63 @@ def clicked1():
                 zindow.title("Kalk")
                 zindow.geometry("500x500")
 
+                kalk1 = Label(zindow, text="Vorkommen und Zusammensetzung", font=(
+                    "Times New Roman", 15))
+                kkl = PhotoImage(file="kalkkreislauf.png")
+                img = Label(zindow, image=kkl)
+                img.image = kkl
+                kalk2 = Label(zindow, compound=BOTTOM, text="Zement + Wasser -> CSH-Phasen + Portlandit\nPortlandit = Löschkalk (niedriger Ph-Wert)\nC3S/C2S + H20 -> CaO/SiO2/H20 + Ca(OH)2\n\nPortlandit->Kalkstein (hoher Ph-Wert)\nCa(OH)2 + CO2 + H2O -> CaCO3 + 2H2O", image=kkl, font=("Times New Roman", 11))
+                kalk3 = Label(zindow, text="\nVerwendung",
+                              font=("Times New Roman", 15))
+                kalk4 = Label(
+                    zindow, text="1.Als Bindemittel:\n- Putz\n- Mauermörtel\n- Bestandteil von Beton\n2.Zum Knochenaufbau\n3.Zum Bierbrauen", font=("Times New Roman", 11))
+
+                kalk1.pack()
+                kalk2.pack()
+                kalk3.pack()
+                kalk4.pack()
+
             def clicked4e():
                 yindow.destroy()
                 zindow = tk.Tk()
                 zindow.title("Lehm")
                 zindow.geometry("500x500")
+                canvas_width = 500
+                canvas_height = 850
+                w = Canvas(zindow,
+                           width=canvas_width,
+                           height=canvas_height)
+                s = Scrollbar(w)
+                s.pack(side=RIGHT)
+                # Ich kann da keine Höhe angeben, dann ist alles weg
+                w.pack()
+
+                lehm = PhotoImage(file="llehm.png")
+                img = Label(zindow, image=lehm)
+                img.image = lehm
+                lehm1 = Label(w, text="Vorkommen und Zusammensetzung", font=(
+                    "Times New Roman", 15))
+                lehm2 = Label(w, compound=BOTTOM, text="Verwitterungsprodukt von Urgestein\nGemisch aus Ton, Wasser und Sand\nTon = Koalinit + Montmorillonit, Korngröße>=0,002mm",
+                              image=lehm, font=("Times New Roman", 11))
+                lehm3 = Label(
+                    w, text="Wasser = fester Ton enthält grundsätzlich gebundenes Wasser\nSand = Sio2, Korngröße 0,06-2mm", font=("Times New Roman", 11))
+                lehm4 = Label(w, text="\nEigenschaften",
+                              font=("Times New Roman", 15))
+                lehm5 = Label(w, text="Lehm ist ein mineralisches, bindigesm Lockergestein\nHydration von Ton = Ton wird durch Wasserzufuhr plastisch biegsam\n=\nLehm ist wasserempfindlich = wetterunbeständig\nLehm ist recyclebar (ohne Energiezufuhr\nLehm hat gute Sorptionseigenschaften (gesundes Raumklima)\nLehm ist en guter Wärmespeicher (Durch Zugabe von purösen Stoffen Warmedämmung gegeben (z.B Bims))", font=("Times New Roman", 11))
+                lehm6 = Label(w, text="\nBauen mit Lehm",
+                              font=("Times New Roman", 15))
+                lehm7 = Label(w, text="Beginn des Lehmbau 5000 v. Chr.\nSchibam in Südjemen = älteste Hochhausstadt aus Lehmbauten\nTurm von Babel (7 Jhd v. Chr)\nChinesische Mauer (vor 400 Jahren)\nHeute lebt 1/3 der Menschheit in Lehmbauten\n\nLehmbautechniken zum Bau tragender Wände:\nStampflehmbau (Mithilfe von Schalungen)\nWellerbau (Schalungsloses Aufbauen der Wand u. Abtragen der Oberfläche\nLehmsteinbau (Ziegelsteinbau mit Luftgetrockneten Lehmbausteinen)\n\nAufgrund der Wasserbeständigkeit sind beim Bauen mit Lehm Wasserschutzmaßnahmen nötig", font=("Times New Roman", 11))
+
+                s.config(command=w.yview)
+
+                lehm1.pack()
+                lehm2.pack()
+                lehm3.pack()
+                lehm4.pack()
+                lehm5.pack()
+                lehm6.pack()
+                lehm7.pack()
+                zindow.mainloop()
 
             def clicked4f():
                 yindow.destroy()
@@ -144,6 +212,9 @@ def clicked1():
                 zindow = tk.Tk()
                 zindow.title("Zement")
                 zindow.geometry("500x500")
+
+                zement2 = tk.Label(zindow, text="Zement ist ein anorganisches, fein gemalenes, hydraulisch wirkendes Bindemittel\nfür Mörtel und Beton\nMörtel: Gesteinskörnung <=4mm\nBeton: Gesteinskörnung >4mm", font=(
+                    "Times New Roman", 11)).pack()
 
             def clicked4h():
                 yindow.destroy()
